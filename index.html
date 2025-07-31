@@ -3,18 +3,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Matthew's Revivella Fragrance Planner</title>
+  <title>Matthew's Full Revivella Fragrance Planner</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; padding: 20px; margin: 0; }
-    h1 { text-align: center; color: #2c3e50; }
-    .filters { margin: 20px auto; text-align: center; }
-    .filters select, .filters input {
-      padding: 8px; margin: 5px; font-size: 14px; border-radius: 6px; border: 1px solid #ccc;
-    }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    th, td { padding: 12px; border: 1px solid #e0e0e0; text-align: left; vertical-align: top; }
-    th { background-color: #222; color: #fff; }
-    tr:nth-child(even) { background-color: #fafafa; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 20px; }
+    h1, h2 { text-align: center; color: #2c3e50; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; }
+    th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+    th { background-color: #2c3e50; color: #fff; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
     .tag { display: inline-block; padding: 3px 6px; border-radius: 4px; font-size: 12px; margin: 2px; color: #fff; }
     .fresh { background-color: #3498db; }
     .gourmand { background-color: #d35400; }
@@ -27,33 +23,14 @@
 </head>
 <body>
 
-<h1>Matthew's Revivella Interactive Fragrance Planner</h1>
+<h1>Matthew's Revivella Fragrance Planner</h1>
 
-<div class="filters">
-  <input type="text" id="search" placeholder="🔍 Search by name, notes, or dupe...">
-  <select id="season">
-    <option value="All">🌍 Show All (Non-Seasonal)</option>
-    <option value="Summer">☀️ Summer</option>
-    <option value="Autumn">🍂 Autumn</option>
-    <option value="Winter">❄️ Winter</option>
-    <option value="Spring">🌸 Spring</option>
-  </select>
-  <select id="category">
-    <option value="">🏷️ All Categories</option>
-    <option value="Gourmand">🍮 Gourmand</option>
-    <option value="Fresh">🌞 Fresh</option>
-    <option value="Evening Beast">🌙 Evening Beast</option>
-    <option value="Office Safe">✅ Office Safe</option>
-    <option value="Matchday">⚽ Matchday</option>
-    <option value="Signature">🌟 Signature</option>
-  </select>
-</div>
-
-<table id="fragranceTable">
+<h2>🌍 Full Fragrance Archive</h2>
+<table>
   <thead>
     <tr>
       <th>Fragrance</th>
-      <th>Main Notes</th>
+      <th>Main Accords</th>
       <th>Season</th>
       <th>Category</th>
       <th>Layering Use</th>
@@ -65,223 +42,242 @@
     <tr>
       <td>Pursuit of Pira</td>
       <td>Fruity, sweet, citrus, amber</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Spring, Summer</td>
+      <td><span class="tag ">EDP</span></td>
       <td>Fruity base / needs grounding</td>
-      <td></td>
+      <td>Xerjoff Erba Pura</td>
     </tr>
     
     <tr>
       <td>Angel</td>
       <td>Sweet, boozy, warm spicy</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Autumn, Winter</td>
+      <td><span class="tag ">EDP</span></td>
       <td>Sweet base / needs edge</td>
-      <td></td>
+      <td>Kilian Angels’ Share</td>
     </tr>
     
     <tr>
       <td>Climax</td>
       <td>Boozy, tobacco, cinnamon, vanilla</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Autumn, Winter</td>
+      <td><span class="tag ">EDP</span></td>
       <td>Power base for layering</td>
-      <td></td>
+      <td>Initio Side Effect</td>
     </tr>
     
     <tr>
       <td>L’Homme Signature</td>
       <td>Fresh spicy, woody, vanilla</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Spring, Autumn</td>
+      <td><span class="tag ">EDT</span></td>
       <td>Base anchor, light use</td>
-      <td></td>
+      <td>Boss Bottled</td>
     </tr>
     
     <tr>
       <td>Exclusive Pour L’Homme</td>
       <td>Aromatic, fresh spicy, woody</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Spring, Autumn</td>
+      <td><span class="tag ">EDP</span></td>
       <td>Evening layering base</td>
-      <td></td>
+      <td>YSL Y Elixir</td>
     </tr>
     
     <tr>
       <td>Mont Blanc Explorer</td>
       <td>Fruity, musky, woody</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Spring, Summer</td>
+      <td><span class="tag ">EDP</span></td>
       <td>Brightener / layering enhancer</td>
-      <td></td>
+      <td>Creed Aventus</td>
     </tr>
     
     <tr>
       <td>Brut Aftershave</td>
       <td>Green, spicy, aromatic</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Spring, Autumn</td>
+      <td><span class="tag ">Aftershave</span></td>
       <td>Retro combo element</td>
-      <td></td>
+      <td>nan</td>
     </tr>
     
     <tr>
       <td>Legend</td>
       <td>Spicy, tobacco, citrus</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Spring, Summer</td>
+      <td><span class="tag ">EDT</span></td>
       <td>Needs fixing</td>
-      <td></td>
+      <td>Spicebomb</td>
     </tr>
     
     <tr>
       <td>Dark Noir</td>
       <td>Woody, floral, dark</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Autumn, Winter</td>
+      <td><span class="tag ">EDT</span></td>
       <td>Collar booster</td>
-      <td></td>
+      <td>Tom Ford Black Orchid</td>
     </tr>
     
     <tr>
       <td>Dirty English</td>
       <td>Woody, leathery, spicy</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Autumn, Winter</td>
+      <td><span class="tag ">EDT</span></td>
       <td>Dark base</td>
-      <td></td>
+      <td>Original</td>
     </tr>
     
     <tr>
       <td>Lattafa Asad</td>
       <td>Spicy, lavender, woody</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Autumn, Winter</td>
+      <td><span class="tag ">EDP</span></td>
       <td>Power layering core</td>
-      <td></td>
+      <td>Sauvage Elixir</td>
     </tr>
     
     <tr>
       <td>Lattafa Khamrah</td>
       <td>Cinnamon, vanilla, sweet</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>All Seasons</td>
+      <td><span class="tag ">EDP</span></td>
       <td>Sweet booster</td>
-      <td></td>
+      <td>Kilian Angels’ Share</td>
     </tr>
     
     <tr>
       <td>Honor & Glory</td>
       <td>Pineapple brûlée, sweet vanilla, soft spices</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>All Seasons</td>
+      <td><span class="tag ">EDP</span></td>
       <td>Soft gourmand base</td>
-      <td></td>
+      <td>Original</td>
     </tr>
     
     <tr>
       <td>Obsession Aftershave</td>
       <td>Spicy, amber, aromatic</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Autumn, Winter</td>
+      <td><span class="tag ">Aftershave</span></td>
       <td>Retro layering, fixer</td>
-      <td></td>
+      <td>Obsession</td>
     </tr>
     
     <tr>
       <td>Quorum</td>
       <td>Woody, green, leather</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
+      <td>Spring, Autumn</td>
+      <td><span class="tag ">EDT</span></td>
       <td>Vintage fougère anchor</td>
-      <td></td>
+      <td>Original</td>
     </tr>
     
     <tr>
       <td>CDN Milestone EDP</td>
       <td>Marine, salty, musky, fresh</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
-      <td>Core fresh base – needs bright top or rich anchor</td>
+      <td>All Seasons</td>
       <td></td>
+      <td>Core fresh base – needs bright top or rich anchor</td>
+      <td>Creed Millésime Impérial</td>
     </tr>
     
     <tr>
       <td>Odyssey Lemon EDP</td>
       <td>Citrus, fresh, bright, slightly sweet</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
-      <td>Top note enhancer – brightener</td>
+      <td>Spring, Summer</td>
       <td></td>
+      <td>Top note enhancer – brightener</td>
+      <td>Unknown – lemon-forward citrus</td>
     </tr>
     
     <tr>
       <td>Odyssey Mandarin Sky EDP</td>
       <td>Mandarin, sweet citrus, smooth fruity</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
-      <td>Round citrus twist – softens fresh or musky scents</td>
+      <td>Spring, Summer</td>
       <td></td>
+      <td>Round citrus twist – softens fresh or musky scents</td>
+      <td>Unknown</td>
     </tr>
     
     <tr>
       <td>Drive Pour Homme</td>
       <td>Fresh, citrus, musky, sporty</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
-      <td>Clean versatile base – office or daily layering</td>
+      <td>Spring, Summer</td>
       <td></td>
+      <td>Clean versatile base – office or daily layering</td>
+      <td>Chanel Allure Homme Sport</td>
     </tr>
     
     <tr>
       <td>Honor & Glory EDP</td>
       <td>Pineapple, vanilla, sweet, spicy, powdery</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
-      <td>Gourmand topper – adds sweet lift</td>
+      <td>All Seasons</td>
       <td></td>
+      <td>Gourmand topper – adds sweet lift</td>
+      <td>Original (pineapple brûlée style)</td>
     </tr>
     
     <tr>
       <td>Khamrah EDP</td>
       <td>Cinnamon, boozy, sweet, warm spicy</td>
-      <td>Non-Seasonal</td>
-      <td><span class="tag "></span></td>
-      <td>Power base – use sparingly to boost depth</td>
+      <td>Autumn, Winter</td>
       <td></td>
+      <td>Power base – use sparingly to boost depth</td>
+      <td>Kilian Angels’ Share</td>
     </tr>
     
   </tbody>
 </table>
 
-<script>
-  const searchInput = document.getElementById("search");
-  const seasonFilter = document.getElementById("season");
-  const categoryFilter = document.getElementById("category");
-  const rows = document.querySelectorAll("tbody tr");
-
-  function filterTable() {
-    const searchValue = searchInput.value.toLowerCase();
-    const seasonValue = seasonFilter.value;
-    const categoryValue = categoryFilter.value;
-
-    rows.forEach(row => {
-      const text = row.innerText.toLowerCase();
-      const season = row.children[2].innerText;
-      const category = row.children[3].innerText;
-
-      const matchesSearch = text.includes(searchValue);
-      const matchesSeason = seasonValue === "All" || season.includes(seasonValue);
-      const matchesCategory = !categoryValue || category.includes(categoryValue);
-
-      row.style.display = (matchesSearch && matchesSeason && matchesCategory) ? "" : "none";
-    });
-  }
-
-  searchInput.addEventListener("input", filterTable);
-  seasonFilter.addEventListener("change", filterTable);
-  categoryFilter.addEventListener("change", filterTable);
-</script>
+<h2>🧪 Logged Layering Combos</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Fragrance</th>
+      <th>Combo Name</th>
+      <th>Paired With</th>
+      <th>Layering Role</th>
+      <th>Performance</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+        <tr>
+          <td>Climax</td>
+          <td>Smooth Rebel</td>
+          <td>Dark Noir (optional), Asad Bourbon</td>
+          <td>Power base for layering</td>
+          <td>Excellent</td>
+        </tr>
+        
+        <tr>
+          <td>Mont Blanc Explorer</td>
+          <td>Golden Terrace Swagger, Royal Brûlée Reserve – Smoke Trail Variant</td>
+          <td>Khamrah, Honor & Glory, Drive Pour Homme</td>
+          <td>Brightener / layering enhancer</td>
+          <td>Good</td>
+        </tr>
+        
+        <tr>
+          <td>Honor & Glory</td>
+          <td>Golden Terrace Swagger, Royal Brûlée Reserve – Smoke Trail Variant</td>
+          <td>Khamrah, Drive Pour Homme, Mont Blanc Explorer</td>
+          <td>Soft gourmand base</td>
+          <td>Moderate</td>
+        </tr>
+        
+        <tr>
+          <td>Drive Pour Homme</td>
+          <td>Confident Executive, Golden Terrace Swagger</td>
+          <td>Honor & Glory, Mont Blanc Explorer, Asad Bourbon</td>
+          <td>Clean versatile base – office or daily layering</td>
+          <td>Good</td>
+        </tr>
+        
+  </tbody>
+</table>
 
 </body>
 </html>
