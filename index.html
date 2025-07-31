@@ -1,91 +1,177 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Matthew's Fragrance Planner</title>
+  <title>Matthew's Revivella Fragrance Planner</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; color: #333; }
-    h1, h2, h3 { color: #2c3e50; }
-    .section { margin-bottom: 40px; }
-    .combo-card {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; padding: 20px; margin: 0; }
+    h1 { text-align: center; color: #2c3e50; }
+    .filters { margin: 20px auto; text-align: center; }
+    .filters select, .filters input {
+      padding: 8px; margin: 5px; font-size: 14px; border-radius: 6px; border: 1px solid #ccc;
     }
-    .file-link { margin: 5px 0; display: block; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    th, td { padding: 12px; border: 1px solid #e0e0e0; text-align: left; vertical-align: top; }
+    th { background-color: #222; color: #fff; }
+    tr:nth-child(even) { background-color: #fafafa; }
+    .tag { display: inline-block; padding: 3px 6px; border-radius: 4px; font-size: 12px; margin: 2px; color: #fff; }
+    .fresh { background-color: #3498db; }
+    .gourmand { background-color: #d35400; }
+    .evening { background-color: #8e44ad; }
+    .office { background-color: #27ae60; }
+    .beast { background-color: #e74c3c; }
+    .matchday { background-color: #f39c12; }
+    .signature { background-color: #2ecc71; }
   </style>
 </head>
 <body>
-  <h1>Matthew's Complete Fragrance Planner</h1>
 
-  <div class="section">
-    <h2>🔗 Downloads</h2>
-    <a href="full_fragrance_master.csv" download class="file-link">📥 Full Fragrance Master CSV</a>
-    <a href="Matthew_Frag_Tracker_2025-07-29.xlsx" download class="file-link">📥 Fragrance Tracker (XLSX)</a>
-    <a href="Matthew_Frag_Rotation_Sheet_2025-07-29.xlsx" download class="file-link">📥 Rotation Planner (XLSX)</a>
-    <a href="Matthew_Layering_Journal_2025-07-29.txt" download class="file-link">📥 Layering Journal (TXT)</a>
-  </div>
+<h1>Matthew's Revivella Interactive Fragrance Planner</h1>
 
-  <div class="section">
-    <h2>🌟 Combo Spotlight – Milestone Royale Crème Trilogy</h2>
+<div class="filters">
+  <input type="text" id="search" placeholder="🔍 Search by name, notes, or dupe...">
+  <select id="season">
+    <option value="">🌍 All Seasons</option>
+    <option value="Summer">☀️ Summer</option>
+    <option value="Autumn">🍂 Autumn</option>
+    <option value="Winter">❄️ Winter</option>
+    <option value="Spring">🌸 Spring</option>
+  </select>
+  <select id="category">
+    <option value="">🏷️ All Categories</option>
+    <option value="Gourmand">🍮 Gourmand</option>
+    <option value="Fresh">🌞 Fresh</option>
+    <option value="Evening Beast">🌙 Evening Beast</option>
+    <option value="Office Safe">✅ Office Safe</option>
+    <option value="Matchday">⚽ Matchday</option>
+    <option value="Signature">🌟 Signature</option>
+  </select>
+</div>
 
-    <div class="combo-card">
-      <h3>Milestone Royale Crème</h3>
-      <p><strong>Fragrance Combo:</strong> Club de Nuit Milestone + Honor & Glory + Climax (collar)</p>
-      <p><strong>Sprays:</strong> 3–4 Milestone, 3–4 Honor & Glory, 1 Climax to collar</p>
-      <p><strong>Category:</strong> Milestone Banger Series, Gourmand Layering Series, Evening Flex Combos</p>
-      <p><strong>Mood:</strong> Lux Confident, Clean Gourmand</p>
-      <p><strong>Status:</strong> Wear-Test Verified Bomb ✅</p>
-      <p><strong>Scent Profile:</strong> Salty pineapple crème brûlée with soft spice and amber sweetness. Balanced and confident. A luxe coastal dessert vibe with staying power.</p>
-      <p><strong>Date Logged:</strong> July 31, 2025</p>
-    </div>
+<table id="fragranceTable">
+  <thead>
+    <tr>
+      <th>Fragrance</th>
+      <th>Main Notes</th>
+      <th>Season</th>
+      <th>Category</th>
+      <th>Layering Use</th>
+      <th>Dupe / Identity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lattafa Asad</td>
+      <td>Lavender, Cinnamon, Amber</td>
+      <td>Winter</td>
+      <td><span class="tag beast">🔥 Beast Mode</span></td>
+      <td>Standalone / Signature</td>
+      <td>Sauvage Elixir dupe</td>
+    </tr>
+    <tr>
+      <td>Asad Bourbon</td>
+      <td>Amber, Vanilla, Spice</td>
+      <td>Autumn</td>
+      <td><span class="tag gourmand">🍮 Gourmand</span><span class="tag evening">🌙 Evening Beast</span></td>
+      <td>Core Layering Pillar</td>
+      <td>Original – Not a dupe</td>
+    </tr>
+    <tr>
+      <td>Drive Pour Homme</td>
+      <td>Fresh Citrus, Musk</td>
+      <td>Summer</td>
+      <td><span class="tag fresh">🌞 Fresh</span><span class="tag office">✅ Office Safe</span></td>
+      <td>Fresh Counterbalance / Fixer</td>
+      <td>Allure Homme Sport dupe</td>
+    </tr>
+    <tr>
+      <td>Honor & Glory</td>
+      <td>Pineapple Brûlée, Vanilla, Powder</td>
+      <td>Summer</td>
+      <td><span class="tag gourmand">🍮 Gourmand</span></td>
+      <td>Sweetener / Soft Layer Enhancer</td>
+      <td>Lattafa original</td>
+    </tr>
+    <tr>
+      <td>Climax by Amaric</td>
+      <td>Rum, Vanilla, Cinnamon</td>
+      <td>Winter</td>
+      <td><span class="tag evening">🌙 Evening Beast</span><span class="tag gourmand">🍮 Gourmand</span></td>
+      <td>Layering Spike / Collar Finish</td>
+      <td>Initio Side Effect dupe</td>
+    </tr>
+    <tr>
+      <td>Khamrah</td>
+      <td>Cinnamon, Boozy, Sweet</td>
+      <td>Winter</td>
+      <td><span class="tag beast">🔥 Beast Mode</span><span class="tag gourmand">🍮 Gourmand</span></td>
+      <td>Layering Enhancer / Bold Night Base</td>
+      <td>Angels' Share clone</td>
+    </tr>
+    <tr>
+      <td>Mont Blanc Explorer</td>
+      <td>Bergamot, Vetiver, Ambroxan</td>
+      <td>Spring</td>
+      <td><span class="tag fresh">🌞 Fresh</span><span class="tag matchday">⚽ Matchday</span></td>
+      <td>Bright Top / Matchday Layer</td>
+      <td>Creed Aventus inspired</td>
+    </tr>
+    <tr>
+      <td>Creative Colours Legend</td>
+      <td>Spicebomb-like Spice & Wood</td>
+      <td>Autumn</td>
+      <td><span class="tag evening">🌙 Evening Beast</span></td>
+      <td>Solo Use / Retro Feel</td>
+      <td>Viktor & Rolf Spicebomb dupe</td>
+    </tr>
+    <tr>
+      <td>Dirty English</td>
+      <td>Leather, Tobacco, Oud</td>
+      <td>Winter</td>
+      <td><span class="tag evening">🌙 Evening Beast</span></td>
+      <td>Occasional / Statement Layer</td>
+      <td>Designer original</td>
+    </tr>
+    <tr>
+      <td>Quorum</td>
+      <td>Pine, Leather, Tobacco</td>
+      <td>Spring</td>
+      <td><span class="tag fresh">🌞 Fresh</span></td>
+      <td>Old School Fresh / Morning Base</td>
+      <td>Classic vintage fougère</td>
+    </tr>
+  </tbody>
+</table>
 
-    <div class="combo-card">
-      <h3>Velvet Ember Edition</h3>
-      <p><strong>Fragrance Combo:</strong> Milestone + Honor & Glory + Dark Noir + Climax (collar)</p>
-      <p><strong>Sprays:</strong> 3–4 Milestone, 3–4 Honor & Glory, 1–2 Dark Noir, 1 Climax to collar</p>
-      <p><strong>Category:</strong> Milestone Banger Series, Gourmand Layering Series, Evening Flex Combos</p>
-      <p><strong>Mood:</strong> Smooth Seduction, Dark Luxe</p>
-      <p><strong>Status:</strong> Wear-Test Verified Bomb ✅</p>
-      <p><strong>Scent Profile:</strong> Salty pineapple brûlée layered with velvet orchid darkness and a sensual ambered collar hit. Warm, mysterious, and perfect for night moves.</p>
-      <p><strong>Date Logged:</strong> July 31, 2025</p>
-    </div>
+<script>
+  const searchInput = document.getElementById("search");
+  const seasonFilter = document.getElementById("season");
+  const categoryFilter = document.getElementById("category");
+  const rows = document.querySelectorAll("tbody tr");
 
-    <div class="combo-card">
-      <h3>Fire Trail Edition</h3>
-      <p><strong>Fragrance Combo:</strong> Milestone + Honor & Glory + Khamrah + Climax (collar)</p>
-      <p><strong>Sprays:</strong> 3–4 Milestone, 3–4 Honor & Glory, 1–2 Khamrah, 1 Climax to collar</p>
-      <p><strong>Category:</strong> Milestone Banger Series, Gourmand Layering Series, Spiced Gourmand Bombs, Evening Flex Combos</p>
-      <p><strong>Mood:</strong> Bold Date Night, Spiced Confidence</p>
-      <p><strong>Status:</strong> Wear-Test Verified Bomb ✅</p>
-      <p><strong>Scent Profile:</strong> A smouldering crème brûlée trail spiked with cinnamon, boozy warmth, and marine musk. Loud, delicious, unforgettable.</p>
-      <p><strong>Date Logged:</strong> July 31, 2025</p>
-    </div>
-  </div>
+  function filterTable() {
+    const searchValue = searchInput.value.toLowerCase();
+    const seasonValue = seasonFilter.value;
+    const categoryValue = categoryFilter.value;
 
-  <div class="section">
-    <h2>📅 Seasonal Rotation Preview</h2>
-    <ul>
-      <li><strong>Summer:</strong> Drive Pour Homme, Honor & Glory, Mont Blanc Explorer</li>
-      <li><strong>Autumn:</strong> Asad Bourbon, Climax, Dark Noir, Khamrah</li>
-      <li><strong>Winter:</strong> Khamrah, Angel by Amaric, Dark Noir, Obsession</li>
-      <li><strong>Spring:</strong> Hugo Boss Bottled, Quorum, Explorer, Pursuit of Pira</li>
-    </ul>
-  </div>
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      const season = row.children[2].innerText;
+      const category = row.children[3].innerText;
 
-  <div class="section">
-    <h2>📚 Fragrance Collection (Preview)</h2>
-    <p>Full collection available via download. Key examples include:</p>
-    <ul>
-      <li>Lattafa Asad – Sauvage Elixir dupe</li>
-      <li>Drive Pour Homme – Chanel Allure Homme Sport dupe</li>
-      <li>Honor & Glory – Pineapple crème brûlée + spiced vanilla</li>
-      <li>Khamrah – Cinnamon-heavy, Angels' Share clone</li>
-      <li>Quorum, Brut, Obsession – Vintage classics</li>
-    </ul>
-  </div>
+      const matchesSearch = text.includes(searchValue);
+      const matchesSeason = !seasonValue || season.includes(seasonValue);
+      const matchesCategory = !categoryValue || category.includes(categoryValue);
+
+      row.style.display = (matchesSearch && matchesSeason && matchesCategory) ? "" : "none";
+    });
+  }
+
+  searchInput.addEventListener("input", filterTable);
+  seasonFilter.addEventListener("change", filterTable);
+  categoryFilter.addEventListener("change", filterTable);
+</script>
+
 </body>
 </html>
