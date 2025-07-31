@@ -32,7 +32,7 @@
 <div class="filters">
   <input type="text" id="search" placeholder="🔍 Search by name, notes, or dupe...">
   <select id="season">
-    <option value="">🌍 All Seasons</option>
+    <option value="All">🌍 Show All (Non-Seasonal)</option>
     <option value="Summer">☀️ Summer</option>
     <option value="Autumn">🍂 Autumn</option>
     <option value="Winter">❄️ Winter</option>
@@ -161,7 +161,7 @@
       const category = row.children[3].innerText;
 
       const matchesSearch = text.includes(searchValue);
-      const matchesSeason = !seasonValue || season.includes(seasonValue);
+      const matchesSeason = seasonValue === "All" || season.includes(seasonValue);
       const matchesCategory = !categoryValue || category.includes(categoryValue);
 
       row.style.display = (matchesSearch && matchesSeason && matchesCategory) ? "" : "none";
